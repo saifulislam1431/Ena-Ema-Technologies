@@ -20,18 +20,17 @@ const Navbar = () => {
   const navItems = <>
   <li><NavLink to="/" className={({isActive}) => (isActive ? "navActive " : "navDefault ")}>Home</NavLink></li>
 
-  <div className="dropdown dropdown-hover py-4 px-2 cursor-pointer font-bold text-secondary opacity-80 hover:text-primary hover:opacity-100 ml-2 lg:ml-0">
-  <label tabIndex={0} className="inline-flex items-center gap-1">Services <HiChevronDown className='w-5 h-4'/></label>
-  <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded w-72 top-12 right-0">
-
-  <li><NavLink to="/editing" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}><img src={icon2} alt="SEO" className='w-8'/>Photo Editing</NavLink></li>
-
-  <li><NavLink to="/design" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}><img src={icon1} alt="SEO" className='w-8'/>Web Design</NavLink></li>
+  <div className="dropdown dropdown-hover py-4 px-2 cursor-pointer font-bold text-slate-700 hover:text-primary hover:opacity-100 ml-2 lg:ml-0 z-50">
+  <label tabIndex={0} className="inline-flex items-center gap-1">Services <HiChevronDown className='w-5 h-4 text-primary'/></label>
+  <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded w-72 top-12 right-0 z-50">
 
   <li><NavLink to="/development" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}><img src={icon4} alt="SEO" className='w-8'/>Full Stack Web Development</NavLink></li>
 
   <li><NavLink to="/seo" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}> <img src={icon3} alt="SEO" className='w-8'/> Search Engine Optimization</NavLink></li>
 
+  <li><NavLink to="/editing" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}><img src={icon2} alt="SEO" className='w-8'/>Photo Editing</NavLink></li>
+
+  <li><NavLink to="/design" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}><img src={icon1} alt="SEO" className='w-8'/>Web Design</NavLink></li>
   
   </ul>
 </div>

@@ -16,7 +16,7 @@
 }
 
 .navDefault{
-  @apply text-secondary py-3 mr-2 font-bold hover:bg-transparent hover:text-primary text-sm my-1
+  @apply text-slate-700 py-3 mr-2 font-bold hover:bg-transparent hover:text-primary text-sm my-1
 }
 
 .myBtn{
