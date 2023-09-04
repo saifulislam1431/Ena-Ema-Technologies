@@ -22,3 +22,7 @@
 .myBtn{
   @apply py-3 px-2 border border-primary rounded font-semibold text-secondary hover:bg-primary hover:text-white transition-all duration-700 
 }
+
+.myBtnSec{
+  @apply py-5 px-4 border bg-primary border-primary rounded font-semibold text-white hover:bg-white hover:text-primary transition-all duration-700 
+}
