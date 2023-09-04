@@ -12,9 +12,13 @@
 @tailwind utilities;
 
 .navActive{
-  @apply text-red-600
+  @apply text-primary py-3 mr-2 font-bold hover:bg-transparent hover:text-primary text-sm my-1
 }
 
 .navDefault{
-  @apply text-red-300
+  @apply text-secondary py-3 mr-2 font-bold hover:bg-transparent hover:text-primary text-sm my-1
+}
+
+.myBtn{
+  @apply py-3 px-2 border border-primary rounded font-semibold text-secondary hover:bg-primary hover:text-white transition-all duration-700 
 }
