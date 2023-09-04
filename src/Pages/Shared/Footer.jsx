@@ -7,7 +7,7 @@ import icon4 from "../../assets/icons/linkedin.png";
 
 const Footer = () => {
     return (
-<footer>
+<footer className='mt-14'>
 <footer className="footer p-10 bg-primary bg-opacity-10 text-base-content">
   <aside>
   <Link to="/" className='inline-flex items-center gap-2'>
