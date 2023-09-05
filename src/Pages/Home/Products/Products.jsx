@@ -13,7 +13,7 @@ const Products = () => {
 
 
     useEffect(()=>{
-        const endDate = new Date("2023-09-20").getTime();
+        const endDate = new Date("2023-09-21").getTime();
 
     const countdownTimer = setInterval(() => {
         const now = new Date().getTime();
