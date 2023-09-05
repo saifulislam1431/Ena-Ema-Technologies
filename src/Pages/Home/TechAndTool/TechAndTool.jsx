@@ -36,7 +36,7 @@ const TechAndTool = () => {
 </div>
 
 
-<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7'>
 
 <div className='inline-flex items-center gap-2 bg-primary bg-opacity-10 h-fit rounded-md border border-primary'>
     <div>
@@ -124,21 +124,21 @@ const TechAndTool = () => {
     <div>
     <img src={photoShop} alt="photoShop" className='w-14 rounded-l-md'/>
     </div>
-    <p className='font-bold brandFont text-lg'>Adobe PhotoShop</p>
+    <p className='font-bold brandFont text-lg'>PhotoShop</p>
 </div>
 
 <div className='inline-flex items-center gap-2 bg-primary bg-opacity-10 h-fit rounded-md border border-primary'>
     <div>
     <img src={illustrator} alt="illustrator" className='w-14 h-14 rounded-l-md'/>
     </div>
-    <p className='font-bold brandFont text-lg'>Adobe Illustrator</p>
+    <p className='font-bold brandFont text-lg'>Illustrator</p>
 </div>
 
 <div className='inline-flex items-center gap-2 bg-primary bg-opacity-10 h-fit rounded-md border border-primary'>
     <div>
     <img src={lightRoom} alt="lightRoom" className='w-14 h-14'/>
     </div>
-    <p className='font-bold brandFont text-lg'>Adobe Light room</p>
+    <p className='font-bold brandFont text-lg'>Light room</p>
 </div>
 
 

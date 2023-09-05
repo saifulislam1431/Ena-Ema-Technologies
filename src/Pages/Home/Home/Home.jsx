@@ -4,6 +4,7 @@ import HowWorks from '../HowWorks/HowWorks';
 import ServicesIntro from '../ServicesIntro/ServicesIntro';
 import Products from '../Products/Products';
 import TechAndTool from '../TechAndTool/TechAndTool';
+import Reviews from '../Reviews/Reviews';
 
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
             <ServicesIntro />
             <Products />
             <TechAndTool />
+            <Reviews />
         </section>
     );
 };
