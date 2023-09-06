@@ -12,7 +12,7 @@ import { HiOutlineCheckCircle } from "react-icons/hi2";
 import { useForm } from 'react-hook-form';
 
 
-const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro, aboutListTitle, aboutHead1, aboutHead2,aboutHead3,aboutHead4,aboutHead5,aboutHead6, aboutDes1,aboutDes2,aboutDes3,aboutDes4,aboutDes5,aboutDes6 , processTitle, processDes, process1, process2,process3,process4}) => {
+const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro, aboutListTitle, aboutHead1, aboutHead2,aboutHead3,aboutHead4,aboutHead5,aboutHead6, aboutDes1,aboutDes2,aboutDes3,aboutDes4,aboutDes5,aboutDes6 , processTitle, processDes, process1, process2,process3,process4,value}) => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
 
@@ -60,7 +60,7 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 
                         <p className='my-5 brandFont'><span className='font-semibold'>{aboutHead5}</span> {aboutDes5}</p>
 
-                        <p className='my-5 brandFont'><span className='font-semibold'>{aboutDes6}</span> {aboutDes6}</p>
+                        <p className='my-5 brandFont'><span className='font-semibold'>{aboutHead6}</span> {aboutDes6}</p>
 
                     </div>
                     <div className="divider lg:divider-horizontal opacity-60"></div>
@@ -153,7 +153,7 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 <div className='my-10'>
 <p className='text-lg brandFont mb-3 inline-flex items-center gap-2'><HiOutlineCheckCircle className='w-7 h-7 text-primary' />Unlock Talented On-Demand Teams for Your Every Need.</p>
 
-<p className='text-lg brandFont mb-3 inline-flex items-center gap-2'><HiOutlineCheckCircle className='w-7 h-7 text-primary' />Ensuring Data Security and Transparency: Our Commitment to Protecting Your Information.</p>
+<p className='text-lg brandFont mb-3 inline-flex items-center gap-2'><HiOutlineCheckCircle className='w-7 h-7 text-primary' />Ensuring Data Security and Transparency.</p>
 
 <p className='text-lg brandFont mb-3 inline-flex items-center gap-2'><HiOutlineCheckCircle className='w-7 h-7 text-primary' />Scalable Teams, Agile Solutions: Achieve Cost-Efficiency with Flexibility.</p>
 
@@ -194,7 +194,7 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
                                 <input type="number" placeholder='Your Number' {...register("phone", { min: 5, max: 99 })} className='inputField' />
                             </div> */}
 <label className='font-bold brandFont'>Services<sup className='text-error'>*</sup></label>
-<input type='text' defaultValue="Full Stack Development"
+<input type='text' defaultValue={value}
                                 {...register("service", { required: true })}
                                 aria-invalid={errors.service ? "true" : "false"}
                                 className='inputField' />
