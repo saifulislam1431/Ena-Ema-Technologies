@@ -23,8 +23,8 @@ const Contact = () => {
     return (
         <section className='flex items-center justify-center min-h-[calc(100vh-100px)]'>
             <Helmet>
-                <title>Ena Ema Technologies | Contact</title>
-            </Helmet> 
+              <title>Contact | Ena Ema Technologies</title>
+          </Helmet>
             <div>
                 <div className='text-center my-10'>
                 <Link to="/" className='inline-flex items-center gap-2'>
