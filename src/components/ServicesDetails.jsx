@@ -10,9 +10,10 @@ import { Link } from 'react-router-dom';
 import SectionHead from './SectionHead';
 import { HiOutlineCheckCircle } from "react-icons/hi2";
 import { useForm } from 'react-hook-form';
+import { Helmet } from 'react-helmet-async';
 
 
-const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro, aboutListTitle, aboutHead1, aboutHead2,aboutHead3,aboutHead4,aboutHead5,aboutHead6, aboutDes1,aboutDes2,aboutDes3,aboutDes4,aboutDes5,aboutDes6 , processTitle, processDes, process1, process2,process3,process4,value}) => {
+const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro, aboutListTitle, aboutHead1, aboutHead2,aboutHead3,aboutHead4,aboutHead5,aboutHead6, aboutDes1,aboutDes2,aboutDes3,aboutDes4,aboutDes5,aboutDes6 , processTitle, processDes, process1, process2,process3,process4,value, helmetTitle}) => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
 
@@ -23,6 +24,9 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 
     return (
         <section className='my-16'>
+            <Helmet>
+              <title>{helmetTitle} | Ena Ema Technologies</title>
+          </Helmet>
             <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11 overflow-hidden'>
                 <div data-aos="fade-left"
      data-aos-duration="3000">
