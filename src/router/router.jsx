@@ -7,6 +7,8 @@ import About from "../Pages/About/About";
 import ServicesDetails from "../components/ServicesDetails";
 import FullStack from "../Pages/FullStack/FullStack";
 import Editing from "../Pages/Editing/Editing";
+import SEODetails from "../Pages/SEODetails/SEODetails";
+import DesignDetail from "../Pages/DesignDetail/DesignDetail";
 
 const router = createBrowserRouter([
 {
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
         {
             path: "/editing",
             element:<Editing />
+        },
+        {
+            path: "/seo",
+            element:<SEODetails />
+        },
+        {
+            path:"/design",
+            element:<DesignDetail />
         }
     ]
 }
