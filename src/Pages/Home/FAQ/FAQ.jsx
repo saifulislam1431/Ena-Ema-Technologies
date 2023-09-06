@@ -6,8 +6,9 @@ const FAQ = () => {
        <section className='my-20 text-center'>
 <SectionHead title="Uncover the Answers, Your Guide to Outsourcing Software Development Solutions" description="Beyond the Ordinary: Dive into Our Services and Solutions Tailored Exclusively for Your Business Success."/>
 
-<div className='grid grid-cols-1 md:grid-cols-2 items-center justify-center px-3  gap-6 my-10'>
-                <div className='space-y-5'>
+<div className='grid grid-cols-1 md:grid-cols-2 items-center justify-center px-3  gap-6 my-10 overflow-hidden'>
+                <div className='space-y-5' data-aos="fade-left"
+     data-aos-duration="3000">
                     <div tabIndex={0} className="collapse collapse-arrow shadow-lg bg-secondary bg-opacity-20 rounded-lg">
                         <input type="checkbox" />
                         <div className="collapse-title text-lg font-semibold border-b-2 border-b-primary">
@@ -39,7 +40,8 @@ const FAQ = () => {
                     </div>
                 </div>
 
-                <div className='space-y-5'>
+                <div className='space-y-5' data-aos="flip-right"
+     data-aos-duration="3000">
                     <div tabIndex={0} className="collapse collapse-arrow shadow-lg bg-secondary bg-opacity-20 rounded-lg">
                         <input type="checkbox" />
                         <div className="collapse-title text-lg font-semibold border-b-2 border-b-primary">

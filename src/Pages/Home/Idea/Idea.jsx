@@ -4,8 +4,9 @@ import { Link } from 'react-router-dom';
 import { FaArrowRightLong } from "react-icons/fa6";
 const Idea = () => {
     return (
-<section className='my-28 lg:w-2/3 mx-auto'>
-<div className="hero rounded-2xl" style={{backgroundImage: `url(${ideaImg})`}}>
+<section className='my-28 lg:w-2/3 mx-auto overflow-hidden'>
+<div className="hero rounded-2xl" style={{backgroundImage: `url(${ideaImg})`}} data-aos="flip-up"
+     data-aos-duration="3000">
   <div className="hero-overlay bg-neutral bg-opacity-70 rounded-2xl"></div>
   <div className="hero-content text-left text-neutral-content py-10 px-10">
     <div>

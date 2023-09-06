@@ -23,8 +23,9 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 
     return (
         <section className='my-16'>
-            <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11'>
-                <div>
+            <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11 overflow-hidden'>
+                <div data-aos="fade-left"
+     data-aos-duration="3000">
                     <h1 className='brandFont font-extrabold text-3xl'>{mainTitle}</h1>
                     <p className='my-10 brandFont'>{mainIntro}</p>
 
@@ -36,18 +37,20 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
                 </div>
                 <div className="divider lg:divider-horizontal opacity-60"></div>
 
-                <div className='w-full'>
+                <div className='w-full' data-aos="fade-right"
+     data-aos-duration="3000">
                     <img src={heroImg} alt="Hero Image" />
                 </div>
             </div>
 
-            <div className='my-28'>
+            <div className='my-28 overflow-hidden'>
                 <div className='text-center mb-16'>
                     <h1 className='font-bold brandFont text-2xl mb-3'>{aboutTile}</h1>
                     <p className='text-lg brandFont'>{aboutIntro}</p>
                 </div>
 
-                <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11'>
+                <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11' data-aos="fade-left"
+     data-aos-duration="3000">
                     <div>
                         <h1 className='brandFont font-semibold text-lg text-primary'>{aboutListTitle}</h1>
                         <p className='my-5 brandFont'><span className='font-semibold'>{aboutHead1}</span> {aboutDes1}</p>
@@ -65,7 +68,8 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
                     </div>
                     <div className="divider lg:divider-horizontal opacity-60"></div>
 
-                    <div className='w-full'>
+                    <div className='w-full' data-aos="fade-right"
+     data-aos-duration="3000">
                         <img src={ideaSetup} alt="Hero Image" />
                     </div>
                 </div>
@@ -76,9 +80,10 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 <p className='text-lg brandFont'>{processDes}</p>
 
 
-<div className='my-20  items-center justify-center flex flex-col lg:flex-row gap-10'>
+<div className='my-20  items-center justify-center flex flex-col lg:flex-row gap-10 overflow-hidden'>
 
-<div>
+<div data-aos="fade-left"
+     data-aos-duration="3000">
 <div className="hero h-52 w-52 rounded-full relative" style={{backgroundImage: `url(${brushPaintBg})`}}>
 {/* <div className="hero-overlay bg-opacity-40 rounded-full"></div> */}
 
@@ -91,7 +96,8 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 </div>
 
 
-<div>
+<div data-aos="fade-left"
+     data-aos-duration="3000">
 <div className="hero h-52 w-52 rounded-full relative" style={{backgroundImage: `url(${brushPaintBg})`}}>
 {/* <div className="hero-overlay bg-opacity-40 rounded-full"></div> */}
 
@@ -103,7 +109,8 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 <p className='font-semibold brandFont my-2 text-lg'>{process2}</p>
 </div>
 
-<div>
+<div data-aos="fade-up"
+     data-aos-duration="3000">
 <div className="hero h-52 w-52 rounded-full relative" style={{backgroundImage: `url(${brushPaintBg})`}}>
 {/* <div className="hero-overlay bg-opacity-40 rounded-full"></div> */}
 
@@ -116,7 +123,8 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 </div>
 
 
-<div>
+<div data-aos="fade-right"
+     data-aos-duration="3000">
 <div className="hero h-52 w-52 rounded-full relative" style={{backgroundImage: `url(${brushPaintBg})`}}>
 {/* <div className="hero-overlay bg-opacity-40 rounded-full"></div> */}
 
@@ -128,7 +136,8 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 <p className='font-semibold brandFont my-2 text-lg'>{process4}</p>
 </div>
 
-<div>
+<div data-aos="fade-right"
+     data-aos-duration="3000">
 <div className="hero h-52 w-52 rounded-full relative" style={{backgroundImage: `url(${brushPaintBg})`}}>
 {/* <div className="hero-overlay bg-opacity-40 rounded-full"></div> */}
 

@@ -18,11 +18,12 @@ import lightRoom from "../../../assets/icons/photoshop-lightroom.png";
 
 const TechAndTool = () => {
     return (
-        <section className='my-28 text-center'>
+        <section className='my-28 text-center overflow-hidden'>
             <SectionHead title="Technology Ans Tools We Used" description="It has become a prerequisite for companies to develop custom software products to stay competitive. Ena Ema Technologies's technical expertise use the most popular technology for development outsourcing software."/>
 
 
-<div className='my-14 bg-primary bg-opacity-10 rounded-2xl px-7 py-5 lg:w-1/2 mx-auto flex items-center gap-5'>
+<div className='my-14 bg-primary bg-opacity-10 rounded-2xl px-7 py-5 lg:w-1/2 mx-auto flex items-center gap-5' data-aos="flip-up"
+     data-aos-duration="3000">
 
 <div>
     <img src={program} alt="program" className='w-28'/>
