@@ -7,10 +7,14 @@ import TechAndTool from '../TechAndTool/TechAndTool';
 import Reviews from '../Reviews/Reviews';
 import FAQ from '../FAQ/FAQ';
 import Idea from '../Idea/Idea';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <section>
+            <Helmet>
+              <title>Home | Ena Ema Technologies</title>
+          </Helmet>
             <Banner />
             <HowWorks />
             <ServicesIntro />

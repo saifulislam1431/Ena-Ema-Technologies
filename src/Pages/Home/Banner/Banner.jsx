@@ -3,7 +3,7 @@ import banner1 from "../../../assets/banner/Banner1_Mesa de trabajo 1.png"
 import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
-        <section className='my-16'>
+        <section className='my-16 px-2'>
 <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11 overflow-hidden'>
 
 <div data-aos="fade-left"

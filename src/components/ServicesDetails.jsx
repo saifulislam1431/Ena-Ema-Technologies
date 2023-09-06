@@ -19,7 +19,14 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 
     const onSubmit = (data) => {
 
-       console.log(data);
+       const newMessage ={
+        name:data.name,
+        email:data.email,
+        message:data.message,
+        number:data.number,
+        service:data.service
+       }
+       console.log(newMessage);
     }
 
     return (
@@ -27,7 +34,7 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
             <Helmet>
               <title>{helmetTitle} | Ena Ema Technologies</title>
           </Helmet>
-            <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11 overflow-hidden'>
+            <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11 overflow-hidden px-2'>
                 <div data-aos="fade-left"
      data-aos-duration="3000">
                     <h1 className='brandFont font-extrabold text-3xl'>{mainTitle}</h1>
@@ -47,7 +54,7 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
                 </div>
             </div>
 
-            <div className='my-28 overflow-hidden'>
+            <div className='my-28 overflow-hidden px-2'>
                 <div className='text-center mb-16'>
                     <h1 className='font-bold brandFont text-2xl mb-3'>{aboutTile}</h1>
                     <p className='text-lg brandFont'>{aboutIntro}</p>
@@ -163,7 +170,7 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
 <div className='text-left'>
 <SectionHead title="How can we help you" description="Flexible Staff Augmentation: Customized Solutions Tailored to Your Business Needs."/>
 
-<div className='my-10'>
+<div className='my-10 px-2'>
 <p className='text-lg brandFont mb-3 inline-flex items-center gap-2'><HiOutlineCheckCircle className='w-7 h-7 text-primary' />Unlock Talented On-Demand Teams for Your Every Need.</p>
 
 <p className='text-lg brandFont mb-3 inline-flex items-center gap-2'><HiOutlineCheckCircle className='w-7 h-7 text-primary' />Ensuring Data Security and Transparency.</p>

@@ -14,9 +14,16 @@ const Contact = () => {
     const onSubmit = (data) => {
         if(data.service === "Select Your Service"){
             return setError("Service is required")
+        }else{
+            const newMessage ={
+                name:data.name,
+                email:data.email,
+                message:data.message,
+                number:data.number,
+                service:data.service
+               }
+               console.log(newMessage);
         }
-
-       console.log(data);
     }
 
 
