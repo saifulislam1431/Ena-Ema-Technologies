@@ -24,7 +24,6 @@ const Home = () => {
             <Reviews />
             <FAQ />
             <Idea />
-            <Loading />
         </section>
 
     );

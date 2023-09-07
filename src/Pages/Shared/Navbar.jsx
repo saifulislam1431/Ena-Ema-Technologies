@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from "../../assets/logo/EnaEma.png"
+import logo from "../../assets/logo/EnaEma.png";
 import { HiChevronDown } from "react-icons/hi2";
 import { IoClose } from "react-icons/io5";
 import icon1 from "../../assets/icons/graphic-designer.png";

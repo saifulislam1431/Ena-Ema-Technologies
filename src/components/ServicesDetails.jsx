@@ -37,7 +37,7 @@ const ServicesDetails = ({mainTitle , mainIntro, heroImg, aboutTile, aboutIntro,
         number:data.number,
         service:data.service
        }
-       const res = await axios.post("http://localhost:5000/clients-message",newMessage)
+       const res = await axios.post("https://ena-ema-server.vercel.app/clients-message",newMessage)
 if(res.data.insertedId){
     Swal.fire({
         title: 'Success!',

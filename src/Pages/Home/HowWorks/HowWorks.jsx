@@ -15,6 +15,7 @@ const HowWorks = () => {
 <SectionHead title="How Ena Ema Technologies Works" description="Cultivating Quality Through Agile Excellence: Choose Your web Outsourcing Model, and We'll Elevate Your Core Competencies to Propel Your Success in the Digital Landscape. Partner with Ena Ema Technologies for Unmatched Expertise and Innovation."/>
 
       <div className='my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center overflow-hidden'>
+
 <div className='bg-white px-3 py-4 rounded-xl hover:shadow-md hover:shadow-primary h-fit text-left' data-aos="fade-left"
      data-aos-duration="3000">
 <img src={workIcon2} alt="Team Augmentation" className='w-12'/>
@@ -37,18 +38,18 @@ const HowWorks = () => {
 </div>
 </div>
 
-
-
 <div className='bg-white px-3 py-4 rounded-xl hover:shadow-md hover:shadow-primary h-fit text-left' data-aos="fade-right"
      data-aos-duration="3000">
 <img src={workIcon3} alt="workIcon3" className='w-12'/>
 <p className='brandFont my-4 font-semibold text-secondary opacity-70 text-lg'>MVP Services</p>
-<p className='font-medium'>As a seasoned MVP development company, we're here to breathe life into your product vision. Our comprehensive end-to-end services encompass the entire journey, from ideation and cutting-edge design to seamless delivery and unwavering ongoing support. Let's turn your ideas into reality, together.</p>
+<p className='font-medium'>As a seasoned MVP development company, we're here to breathe life into your product vision. Our comprehensive end-to-end services encompass the entire journey, from ideation and cutting-edge design to seamless delivery and unwavering ongoing support.</p>
 
 <div className='mt-6 mb-4 flex justify-end'>
 <Link to="/contact" className=' text-primary font-bold inline-flex gap-1 items-center'>Hire Us <IoArrowForwardOutline className='w-6 h-6'/></Link> 
 </div>
 </div>
+
+
 </div> 
 
     </div>  
