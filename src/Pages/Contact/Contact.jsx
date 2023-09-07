@@ -4,6 +4,8 @@ import { useForm } from 'react-hook-form';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/logo/EnaEma.png"
 import contactImg from "../../assets/banner/contact-01-01.png"
+import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const Contact = () => {
     const [error , setError] = useState("");
@@ -11,18 +13,33 @@ const Contact = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
 
 
-    const onSubmit = (data) => {
+    const onSubmit = async(data) => {
         if(data.service === "Select Your Service"){
             return setError("Service is required")
         }else{
             const newMessage ={
                 name:data.name,
                 email:data.email,
-                message:data.message,
+                projectDetails:data.message,
                 number:data.number,
                 service:data.service
                }
-               console.log(newMessage);
+const res = await axios.post("http://localhost:5000/clients-message",newMessage)
+if(res.data.insertedId){
+    Swal.fire({
+        title: 'Success!',
+        text: 'Your message successfully received. We will be in touch soon',
+        icon: 'success',
+        confirmButtonText: 'Ok'
+      })
+}else{
+    Swal.fire({
+        title: 'Error!',
+        text: 'Something wrong please kindly try again later, Thank You!',
+        icon: 'error',
+        confirmButtonText: 'Ok'
+      })
+}
         }
     }
 
@@ -37,6 +54,7 @@ const Contact = () => {
                 <Link to="/" className='inline-flex items-center gap-2'>
   <img src={logo} alt="Ena Ema Technologies" className='w-10'/>
   <p className='brandFont font-extrabold text-lg text-secondary'>Ena Ema Technologies</p>
+
     </Link>
 
                 </div>
@@ -83,12 +101,12 @@ const Contact = () => {
                                 <option value="Web Design">Web Design</option>
                             </select>
 
-                            <label className='font-bold brandFont'>Message<sup className='text-error'>*</sup></label>
+                            <label className='font-bold brandFont'>Project Details<sup className='text-error'>*</sup></label>
                             <textarea rows="5" cols="10" placeholder='Your Message'
                                 {...register("message", { required: true })}
                                 aria-invalid={errors.message ? "true" : "false"}
                                 className='inputField' />
-                            {errors.message?.type === 'required' && <p role="alert" className='text-error font-medium'>Message is required</p>}
+                            {errors.message?.type === 'required' && <p role="alert" className='text-error font-medium'>Project Details is required</p>}
 
                             <p className='my-3 font-semibold text-red-600'>{error}</p>
 

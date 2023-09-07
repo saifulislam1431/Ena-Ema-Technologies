@@ -8,6 +8,7 @@ import Reviews from '../Reviews/Reviews';
 import FAQ from '../FAQ/FAQ';
 import Idea from '../Idea/Idea';
 import { Helmet } from 'react-helmet-async';
+import Loading from '../../Loading/Loading';
 
 const Home = () => {
     return (
@@ -23,7 +24,9 @@ const Home = () => {
             <Reviews />
             <FAQ />
             <Idea />
+            <Loading />
         </section>
+
     );
 };
 
