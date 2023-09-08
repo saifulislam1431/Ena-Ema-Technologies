@@ -1,5 +1,5 @@
 import React from 'react';
-import abstractBg from "../../../assets/banner/abstract-01.png";
+import abstractBg from "../../../assets/banner/bannerBgTOp.webp";
 import workIcon1 from "../../../assets/icons/metadata.png";
 import workIcon2 from "../../../assets/icons/teamwork.png";
 import workIcon3 from "../../../assets/icons/technical-support.png";
@@ -9,7 +9,7 @@ import SectionHead from '../../../components/SectionHead';
 const HowWorks = () => {
     return (
 <div className="hero my-16" style={{backgroundImage: `url(${abstractBg}) `}}>
-  <div className="hero-overlay bg-primary bg-opacity-20"></div>
+  {/* <div className="hero-overlay bg-primary bg-opacity-20"></div> */}
   <div className="hero-content text-center">
     <div className="my-6">
 <SectionHead title="How Ena Ema Technologies Works" description="Cultivating Quality Through Agile Excellence: Choose Your web Outsourcing Model, and We'll Elevate Your Core Competencies to Propel Your Success in the Digital Landscape. Partner with Ena Ema Technologies for Unmatched Expertise and Innovation."/>

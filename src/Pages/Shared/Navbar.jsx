@@ -26,11 +26,11 @@ const Navbar = () => {
 
   <li><NavLink to="/development" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}><img src={icon4} alt="SEO" className='w-8'/>Full Stack Web Development</NavLink></li>
 
-  <li><NavLink to="/seo" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}> <img src={icon3} alt="SEO" className='w-8'/> Search Engine Optimization</NavLink></li>
+  {/* <li><NavLink to="/seo" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}> <img src={icon3} alt="SEO" className='w-8'/> Search Engine Optimization</NavLink></li>
 
   <li><NavLink to="/editing" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}><img src={icon2} alt="SEO" className='w-8'/>Photo Editing</NavLink></li>
 
-  <li><NavLink to="/design" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}><img src={icon1} alt="SEO" className='w-8'/>Web Design</NavLink></li>
+  <li><NavLink to="/design" className={({isActive}) => (isActive ? "navActive border-b inline-flex items-center gap-1" : "navDefault border-b inline-flex items-center gap-1")}><img src={icon1} alt="SEO" className='w-8'/>Web Design</NavLink></li> */}
   
   </ul>
 </div>

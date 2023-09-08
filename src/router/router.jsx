@@ -9,6 +9,9 @@ import FullStack from "../Pages/FullStack/FullStack";
 import Editing from "../Pages/Editing/Editing";
 import SEODetails from "../Pages/SEODetails/SEODetails";
 import DesignDetail from "../Pages/DesignDetail/DesignDetail";
+import WebPresence from "../Pages/WebPresence/WebPresence";
+import Ecommerce from "../Pages/Ecommerce/Ecommerce";
+import AdvanceWeb from "../Pages/AdvanceWeb/AdvanceWeb";
 
 const router = createBrowserRouter([
 {
@@ -43,6 +46,18 @@ const router = createBrowserRouter([
         {
             path:"/design",
             element:<DesignDetail />
+        },
+        {
+            path:"/presence",
+            element:<WebPresence />
+        },
+        {
+            path:"/commerce",
+            element:<Ecommerce />
+        },
+        {
+            path:"/advanced",
+            element:<AdvanceWeb />
         }
     ]
 }

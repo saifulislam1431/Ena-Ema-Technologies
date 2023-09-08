@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
-import ErrorImg from "../../assets/banner/ErrorBanner-01.png"
+import ErrorImg from "../../assets/banner/ErrorBanner-01.webp"
 const ErrorPage = () => {
     return (
         <section className='flex items-center justify-center min-h-[calc(100vh-100px)]'>

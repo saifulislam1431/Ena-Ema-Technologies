@@ -1,5 +1,5 @@
 import React from 'react';
-import banner1 from "../../../assets/banner/Banner1_Mesa de trabajo 1.png"
+import banner1 from "../../../assets/banner/Banner1_Mesa de trabajo 1.webp"
 import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
@@ -20,9 +20,9 @@ Hire Developers
 
 <div className="divider lg:divider-horizontal opacity-60"></div> 
 
-<div data-aos="fade-right"
+<div className='w-full' data-aos="fade-right"
      data-aos-duration="3000">
-    <img src={banner1} alt="Hero Image"/>
+    <img src={banner1} alt="Hero Image" className='w-full'/>
 </div>
 
 </div>            

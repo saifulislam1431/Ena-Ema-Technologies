@@ -4,6 +4,7 @@ import logo from "../../assets/logo/EnaEma.png"
 import icon1 from "../../assets/icons/gmail.png";
 import icon3 from "../../assets/icons/facebook.png";
 import icon4 from "../../assets/icons/linkedin.png";
+import { FaFacebook, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
     return (
@@ -15,17 +16,14 @@ const Footer = () => {
   <p className='brandFont font-extrabold text-lg text-secondary'>Ena Ema Technologies</p>
     </Link>
   <p className='py-4 font-bold text-lg'>Get Updated with us Regularly</p> 
-<div className='inline-flex items-center'>
+<div className='inline-flex items-center gap-3'>
 <a target='_blank' href="https://www.facebook.com/profile.php?id=100063832562207">
-<img src={icon3} alt="Facebook" className='w-8'/>
+<FaFacebook className='h-8 w-8 hover:text-secondary transition-colors duration-300'/>
 </a>
 <a href='https://www.linkedin.com/company/ena-ema-technologies/about/' target='_blank'>
-<img src={icon4} alt="Linkedin" className='w-8 mx-3'/>
+<FaLinkedin className='h-8 w-8 hover:text-secondary transition-colors duration-300'/>
 </a>
-<div className="relative">
-        <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
-        <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
-      </div>
+
 </div>
   </aside> 
   <nav className='font-bold'>
@@ -60,8 +58,10 @@ Photo Editing
     <a href="mailto:support@enaema.com">support@enaema.com</a>
     <a href="tel:+880 1926 080 600">+880 1926 080 600</a>
     <p className='underline'>Dhaka Office</p>
-    <p> Amin Model Town <br />
-East Dendabor, <br /> Savar Cantonment </p>
+    <a href="https://goo.gl/maps/XyPpcDWnUDgwBxtD9" target='_blank'>
+    Amin Model Town <br />
+    East Dendabor, <br /> Savar Cantonment
+    </a>
   </nav>
 </footer>
 <footer className="footer footer-center p-4 bg-primary bg-opacity-10 text-base-content border-t border-primary">

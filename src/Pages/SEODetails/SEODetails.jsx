@@ -1,5 +1,5 @@
 import React from 'react';
-import seoImg from "../../assets/banner/seo-01.png"
+import seoImg from "../../assets/banner/seo-01.webp"
 import ServicesDetails from '../../components/ServicesDetails';
 
 const SEODetails = () => {

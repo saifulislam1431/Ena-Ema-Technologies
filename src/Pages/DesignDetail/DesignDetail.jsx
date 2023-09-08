@@ -1,5 +1,5 @@
 import React from 'react';
-import designImg from "../../assets/banner/design-01.png"
+import designImg from "../../assets/banner/design-01.webp"
 import ServicesDetails from '../../components/ServicesDetails';
 
 const DesignDetail = () => {

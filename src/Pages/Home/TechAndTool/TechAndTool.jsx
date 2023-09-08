@@ -15,13 +15,16 @@ import figma from "../../../assets/icons/figma.png";
 import photoShop from "../../../assets/icons/photoshop.png";
 import illustrator from "../../../assets/icons/illustrator.png";
 import lightRoom from "../../../assets/icons/photoshop-lightroom.png";
+import { Link } from 'react-router-dom';
+import { IoArrowForwardSharp } from 'react-icons/io5';
 
 const TechAndTool = () => {
     return (
-        <section className='my-28 text-center overflow-hidden'>
-            <SectionHead title="Technology Ans Tools We Used" description="It has become a prerequisite for companies to develop custom software products to stay competitive. Ena Ema Technologies's technical expertise use the most popular technology for development outsourcing software."/>
+        <section className='my-28 text-center'>
+            <SectionHead title="Empower Your Digital Journey with Ena Ema Technologies: Explore Our Dynamic Service Portfolio" description="Welcome to Ena Ema Technologies, your gateway to a world of digital possibilities. Discover our carefully crafted service offerings designed to elevate your online presence and make your digital dreams a reality. Explore our solutions below."/>
 
 
+<div className='overflow-hidden'>
 <div className='my-14 bg-primary bg-opacity-10 rounded-2xl px-7 py-5 lg:w-1/2 mx-auto flex items-center gap-5' data-aos="flip-up"
      data-aos-duration="3000">
 
@@ -35,9 +38,10 @@ const TechAndTool = () => {
 </div>
 
 </div>
+</div>
 
 
-<div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7'>
+{/* <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-7'>
 
 <div className='inline-flex items-center gap-2 bg-primary bg-opacity-10 h-fit rounded-md border border-primary'>
     <div>
@@ -143,6 +147,52 @@ const TechAndTool = () => {
 </div>
 
 
+
+</div> */}
+
+
+<div className='grid grid-cols-1 lg:grid-cols-3 gap-7 text-left px-3 relative'>
+
+<div className='shadow-xl px-4 py-4 rounded-lg hover:shadow-2xl hover:shadow-secondary transition-all duration-500 h-72'>
+   <h1 className='brandFont py-2 text-2xl font-extrabold text-primary'>Web Presence Solution</h1> 
+   <p className='py-2 font-medium'>Elevate your online presence with our Web Presence Solution. We create unique, fully customized websites that capture your brand's essence and engage your audience.</p>
+
+<div className='flex items-center justify-end my-3 h-76 py-4'>
+<Link to='/presence' className='roundedBtn'>
+   <button><IoArrowForwardSharp className='h-7 w-6'/></button>
+   </Link>
+</div>
+
+
+</div>
+
+
+<div className='shadow-2xl px-4 py-12 rounded-lg hover:shadow-2xl hover:shadow-secondary transition-all duration-500 h-[350px] relative bottom-6'>
+   <h1 className='brandFont py-2 text-2xl font-extrabold text-primary'>E-commerce Solution</h1> 
+   <p className='py-2 font-medium'>Take your business online with our E-commerce Solution. We build secure and user-friendly e-commerce websites that empower you to sell your products or services to a global audience.</p>
+
+<div className='flex items-center justify-end my-3'>
+<Link to='/commerce' className='roundedBtn'>
+   <button><IoArrowForwardSharp className='h-7 w-6'/></button>
+   </Link>
+</div>
+
+
+</div>
+
+
+<div className='shadow-xl px-4 py-4 rounded-lg hover:shadow-2xl hover:shadow-secondary transition-all duration-500 h-72'>
+   <h1 className='brandFont py-2 text-2xl font-extrabold text-primary'>Advanced Web Solution</h1> 
+   <p className='py-2 font-medium'>For complex web application needs, turn to our Advanced Web Application Solution. We develop sophisticated applications with real-time features, user dashboards, and impeccable data handling.</p>
+
+<div className='flex items-center justify-end my-3'>
+<Link to='/advanced' className='roundedBtn'>
+   <button><IoArrowForwardSharp className='h-7 w-6'/></button>
+   </Link>
+</div>
+
+
+</div>
 
 </div>
 

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import ideaSetup from "../assets/banner/idea_setup-01.png"
-import brushPaintBg from "../assets/banner/brush_paint-01.png"
-import planning from "../assets/banner/planning-01.png"
-import prototype from "../assets/banner/prototying-01.png"
-import implement from "../assets/banner/implementation-01.png"
-import testing from "../assets/banner/planning-01.png"
-import delivery from "../assets/banner/delivery-01.png"
+import ideaSetup from "../assets/banner/idea_setup-01.webp"
+import brushPaintBg from "../assets/banner/brush_paint-01.webp"
+import planning from "../assets/banner/planning-01.webp"
+import prototype from "../assets/banner/prototying-01.webp"
+import implement from "../assets/banner/implementation-01.webp"
+import testing from "../assets/banner/testing-01.png"
+import delivery from "../assets/banner/delivery-01.webp"
 import { Link } from 'react-router-dom';
 import SectionHead from './SectionHead';
 import { HiOutlineCheckCircle } from "react-icons/hi2";
@@ -62,11 +62,12 @@ if(res.data.insertedId){
                 <Helmet>
                   <title>{helmetTitle} | Ena Ema Technologies</title>
               </Helmet>
-                <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11 overflow-hidden px-2'>
+                {
+                    mainTitle && mainTitle && heroImg && <div className='w-full flex flex-col lg:flex-row items-start justify-between gap-11 overflow-hidden px-2'>
                     <div data-aos="fade-left"
          data-aos-duration="3000">
                         <h1 className='brandFont font-extrabold text-3xl'>{mainTitle}</h1>
-                        <p className='my-10 brandFont'>{mainIntro}</p>
+                        <p className='mt-5 brandFont mb-10'>{mainIntro}</p>
     
                         <Link to="/contact" className='myBtnSec'>
                             Hire Developers
@@ -78,9 +79,10 @@ if(res.data.insertedId){
     
                     <div className='w-full' data-aos="fade-right"
          data-aos-duration="3000">
-                        <img src={heroImg} alt="Hero Image" />
+                        <img src={heroImg} alt="Hero Image" className='w-full'/>
                     </div>
                 </div>
+                }
     
                 <div className='my-28 overflow-hidden px-2'>
                     <div className='text-center mb-16'>
@@ -256,7 +258,7 @@ if(res.data.insertedId){
                                 {errors.message?.type === 'required' && <p role="alert" className='text-error font-medium'>Project Details is required</p>}
     
     
-                                <input type="submit" value="Send Message" className='myBtnSec' />
+                                <input type="submit" value="Get Quote" className='myBtnSec' />
                             </form>
     
     </div>

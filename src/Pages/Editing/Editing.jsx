@@ -1,5 +1,5 @@
 import React from 'react';
-import editing from "../../assets/banner/editing-01.png"
+import editing from "../../assets/banner/editing-01.webp"
 import ServicesDetails from '../../components/ServicesDetails';
 
 const Editing = () => {

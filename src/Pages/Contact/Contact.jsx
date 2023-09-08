@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { Link, NavLink } from 'react-router-dom';
 import logo from "../../assets/logo/EnaEma.png"
-import contactImg from "../../assets/banner/contact-01-01.png"
+import contactImg from "../../assets/banner/contact-01-01.webp"
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
