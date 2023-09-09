@@ -16,6 +16,8 @@ import SignIn from "../Pages/SignIn/SignIn";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import ManageUsers from "../Pages/Admin/ManageUsers";
 import ManageClients from "../Pages/Admin/ManageClients";
+import PrivateRouter from "./PrivateRouter";
+import AdminRouter from "./AdminRouter";
 
 const router = createBrowserRouter([
 {
@@ -69,15 +71,15 @@ const router = createBrowserRouter([
         },
         {
             path:"/dashboard",
-            element:<Dashboard />,
+            element:<PrivateRouter><AdminRouter><Dashboard /></AdminRouter></PrivateRouter>,
             children:[
                 {
                     path:"manageUsers",
-                    element:<ManageUsers/>
+                    element:<PrivateRouter><AdminRouter><ManageUsers/></AdminRouter></PrivateRouter>
                 },
                 {
                     path:"manageClients",
-                    element:<ManageClients/>
+                    element:<PrivateRouter><AdminRouter><ManageClients/></AdminRouter></PrivateRouter>
                 }
             ]
         }
