@@ -12,6 +12,10 @@ import DesignDetail from "../Pages/DesignDetail/DesignDetail";
 import WebPresence from "../Pages/WebPresence/WebPresence";
 import Ecommerce from "../Pages/Ecommerce/Ecommerce";
 import AdvanceWeb from "../Pages/AdvanceWeb/AdvanceWeb";
+import SignIn from "../Pages/SignIn/SignIn";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import ManageUsers from "../Pages/Admin/ManageUsers";
+import ManageClients from "../Pages/Admin/ManageClients";
 
 const router = createBrowserRouter([
 {
@@ -58,6 +62,24 @@ const router = createBrowserRouter([
         {
             path:"/advanced",
             element:<AdvanceWeb />
+        },
+        {
+            path: "/signIn-koren",
+            element:<SignIn />
+        },
+        {
+            path:"/dashboard",
+            element:<Dashboard />,
+            children:[
+                {
+                    path:"manageUsers",
+                    element:<ManageUsers/>
+                },
+                {
+                    path:"manageClients",
+                    element:<ManageClients/>
+                }
+            ]
         }
     ]
 }
