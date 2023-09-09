@@ -7,7 +7,7 @@ import logo from "../../assets/logo/EnaEma.png"
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Helmet } from 'react-helmet-async';
 import Lottie from "lottie-react";
-import animation from "../../../public/login.json"
+import animation from "../../../public/dashboard.json"
 import Swal from 'sweetalert2';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import axios from 'axios';
@@ -33,7 +33,7 @@ const SignIn = () => {
     const onSubmit = async(data) => {
 
         const email = data.email;
-        const listedEmails = [import.meta.env.VITE_ADMIN1];
+        const listedEmails = [import.meta.env.VITE_ADMIN1, import.meta.env.VITE_ADMIN2];
 
 
         if(!listedEmails.includes(email)){
@@ -95,7 +95,7 @@ const SignIn = () => {
 
 
     return (
-        <section className='flex items-center justify-center min-h-[calc(100vh-100px)]'>
+        <section className='flex items-center justify-center min-h-[calc(100vh-100px)] bg-white'>
             <Helmet>
                 <title>Sign In | Ena Ema Technologies</title>
             </Helmet>

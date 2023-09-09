@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import SectionHead from '../../../components/SectionHead';
-import abstractBg from "../../../assets/banner/abstract-02.png"
+
 
 
 
