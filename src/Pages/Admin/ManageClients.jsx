@@ -6,6 +6,7 @@ import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { Helmet } from 'react-helmet-async';
 import { HiMiniXMark } from 'react-icons/hi2';
+import Swal from 'sweetalert2';
 
 const ManageClients = () => {
     
@@ -23,6 +24,20 @@ const ManageClients = () => {
             return res.data;
         }
     })
+
+    const handleRead =async(id)=>{
+
+        const res = await axiosSecure.patch(`/message/${id}`);
+        if (res.data.modifiedCount > 0) {
+            refetch();
+            Swal.fire({
+                title: 'Success!',
+                text: `Marked as read!`,
+                icon: 'success',
+                confirmButtonText: 'Cool'
+            })
+        }
+    }
 
 
     return (
@@ -43,6 +58,7 @@ const ManageClients = () => {
                                 <th>Name</th>
                                 <th>Email</th>
                                 <th>Phone</th>
+                                <th>Status</th>
                                 <th className='text-center'>Action</th>
                             </tr>
                         </thead>
@@ -62,8 +78,12 @@ const ManageClients = () => {
                                     <td className='font-semibold'>
                                         {message?.number}
                                     </td>
+                                    <td className={`font-semibold ${message?.status ? "text-green-700" : "text-primary"}`}>
+                                        {message?.status ? message.status : "New"}
+                                    </td>
                                     <th className='inline-flex gap-3 items-center'>
                                         <label htmlFor={message._id} className="myBtn">View Details</label>
+                                        <button onClick={()=>handleRead(message._id)} className="myBtn" disabled={message?.status ? true :false}>Mark As Read</button>
                                     </th>
 
                                     <input type="checkbox" id={message._id} className="modal-toggle" />
