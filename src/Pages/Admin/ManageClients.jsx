@@ -1,43 +1,25 @@
 import React from 'react';
 import SectionTitle from '../../components/SectionTitle';
-import { useNavigation } from 'react-router-dom';
+import { Link, useNavigation } from 'react-router-dom';
 import Loading from '../Loading/Loading';
-import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
 import { Helmet } from 'react-helmet-async';
-import { HiMiniXMark } from 'react-icons/hi2';
+import { HiEnvelope, HiMiniXMark, HiOutlinePaperAirplane } from 'react-icons/hi2';
 import Swal from 'sweetalert2';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
+import { useForm } from 'react-hook-form';
+import useClientMessage from '../../Hooks/useClientMessage';
 
 const ManageClients = () => {
-    
+    const [messages, refetch] = useClientMessage();
+
+
     const navigation = useNavigation();
     if (navigation.state === "loading") {
         return <Loading></Loading>
     }
-    const [axiosSecure] = useAxiosSecure();
 
 
-    const { data: messages = [], refetch } = useQuery({
-        queryKey: ["messages"],
-        queryFn: async () => {
-            const res = await axiosSecure.get("/clients-message")
-            return res.data;
-        }
-    })
-
-    const handleRead =async(id)=>{
-
-        const res = await axiosSecure.patch(`/message/${id}`);
-        if (res.data.modifiedCount > 0) {
-            refetch();
-            Swal.fire({
-                title: 'Success!',
-                text: `Marked as read!`,
-                icon: 'success',
-                confirmButtonText: 'Cool'
-            })
-        }
-    }
 
 
     return (
@@ -83,19 +65,19 @@ const ManageClients = () => {
                                     </td>
                                     <th className='inline-flex gap-3 items-center'>
                                         <label htmlFor={message._id} className="myBtn">View Details</label>
-                                        <button onClick={()=>handleRead(message._id)} className="myBtn" disabled={message?.status ? true :false}>Mark As Read</button>
+                                        <Link to={`/dashboard/confirmProject/${message._id}`} className={`${message.status ? "bg-green-700 px-3 py-1 disabled:bg-opacity-40 disabled:cursor-not-allowed font-semibold" : "myBtn"}`}>Confirm</Link>
                                     </th>
 
                                     <input type="checkbox" id={message._id} className="modal-toggle" />
-<div className="modal">
-  <div className="modal-box">
-    <h3 className="brandFont font-bold text-lg">{message.service}</h3>
-    <p className="py-4">{message.message}</p>
-    <div className="modal-action">
-      <label htmlFor={message._id} className="text-neutral hover:text-primary transition-all duration-500 absolute top-6 right-6 cursor-pointer"><HiMiniXMark className='h-7 w-7'/></label>
-    </div>
-  </div>
-</div>
+                                    <div className="modal">
+                                        <div className="modal-box">
+                                            <h3 className="brandFont font-bold text-lg">{message.service}</h3>
+                                            <p className="py-4">{message.projectDetails}</p>
+                                            <div className="modal-action">
+                                                <label htmlFor={message._id} className="text-neutral hover:text-primary transition-all duration-500 absolute top-6 right-6 cursor-pointer"><HiMiniXMark className='h-7 w-7' /></label>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </tr>)
 
                             }

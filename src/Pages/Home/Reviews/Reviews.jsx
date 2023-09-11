@@ -23,7 +23,7 @@ const Reviews = () => {
   const { data: reviews = [], refetch } = useQuery({
     queryKey: ["reviews"],
     queryFn: async () => {
-        const res = await axios.get("https://ena-ema-server.vercel.app/reviews")
+        const res = await axios.get("http://localhost:5000/reviews")
         return res.data;
     }
 })

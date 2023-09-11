@@ -18,72 +18,77 @@ import ManageUsers from "../Pages/Admin/ManageUsers";
 import ManageClients from "../Pages/Admin/ManageClients";
 import PrivateRouter from "./PrivateRouter";
 import AdminRouter from "./AdminRouter";
+import EmailConfirmation from "../Pages/Admin/EmailConfirmation";
 
 const router = createBrowserRouter([
-{
-    path:"/",
-    errorElement:<ErrorPage />,
-    element:<Main />,
-    children:[
-        {
-            path:"/",
-            element:<Home />
-        },
-        {
-            path:"/contact",
-            element:<Contact />
-        },
-        {
-            path:"/about",
-            element:<About />
-        },
-        {
-            path:"/development",
-            element:<FullStack />
-        },
-        {
-            path: "/editing",
-            element:<Editing />
-        },
-        {
-            path: "/seo",
-            element:<SEODetails />
-        },
-        {
-            path:"/design",
-            element:<DesignDetail />
-        },
-        {
-            path:"/presence",
-            element:<WebPresence />
-        },
-        {
-            path:"/commerce",
-            element:<Ecommerce />
-        },
-        {
-            path:"/advanced",
-            element:<AdvanceWeb />
-        },
-        {
-            path: "/signIn-koren",
-            element:<SignIn />
-        },
-        {
-            path:"/dashboard",
-            element:<PrivateRouter><AdminRouter><Dashboard /></AdminRouter></PrivateRouter>,
-            children:[
-                {
-                    path:"manageUsers",
-                    element:<PrivateRouter><AdminRouter><ManageUsers/></AdminRouter></PrivateRouter>
-                },
-                {
-                    path:"manageClients",
-                    element:<PrivateRouter><AdminRouter><ManageClients/></AdminRouter></PrivateRouter>
-                }
-            ]
-        }
-    ]
-}
+    {
+        path: "/",
+        errorElement: <ErrorPage />,
+        element: <Main />,
+        children: [
+            {
+                path: "/",
+                element: <Home />
+            },
+            {
+                path: "/contact",
+                element: <Contact />
+            },
+            {
+                path: "/about",
+                element: <About />
+            },
+            {
+                path: "/development",
+                element: <FullStack />
+            },
+            {
+                path: "/editing",
+                element: <Editing />
+            },
+            {
+                path: "/seo",
+                element: <SEODetails />
+            },
+            {
+                path: "/design",
+                element: <DesignDetail />
+            },
+            {
+                path: "/presence",
+                element: <WebPresence />
+            },
+            {
+                path: "/commerce",
+                element: <Ecommerce />
+            },
+            {
+                path: "/advanced",
+                element: <AdvanceWeb />
+            },
+            {
+                path: "/signIn-koren",
+                element: <SignIn />
+            },
+            {
+                path: "/dashboard",
+                element: <PrivateRouter><AdminRouter><Dashboard /></AdminRouter></PrivateRouter>,
+                children: [
+                    {
+                        path: "manageUsers",
+                        element: <PrivateRouter><AdminRouter><ManageUsers /></AdminRouter></PrivateRouter>
+                    },
+                    {
+                        path: "manageClients",
+                        element: <PrivateRouter><AdminRouter><ManageClients /></AdminRouter></PrivateRouter>
+                    },
+                    {
+                        path: "confirmProject/:id",
+                        element: <PrivateRouter><AdminRouter><EmailConfirmation></EmailConfirmation></AdminRouter></PrivateRouter>
+                    }
+                ]
+            }
+        ]
+    }
 ])
 export default router;

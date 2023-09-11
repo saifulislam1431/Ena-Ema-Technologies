@@ -46,7 +46,7 @@ const SignIn = () => {
                 })
             )
         }else{
-            const response = await axios.get(`https://ena-ema-server.vercel.app/check/admin/${data?.email}`);
+            const response = await axios.get(`http://localhost:5000/check/admin/${data?.email}`);
             if(response.data.admin){
                 signIn(data?.email, data?.password)
                 .then(async (res) => {

@@ -32,7 +32,7 @@ return createUserWithEmailAndPassword(auth, email, password);
 
             if (currentUser) {
                 // const email= currentUser.email;
-                axios.post("https://ena-ema-server.vercel.app/jwt", {
+                axios.post("http://localhost:5000/jwt", {
                     email: currentUser.email
                 }).then(data => {
                     // console.log(data.data.token);
