@@ -65,7 +65,9 @@ const ManageClients = () => {
                                     </td>
                                     <th className='inline-flex gap-3 items-center'>
                                         <label htmlFor={message._id} className="myBtn">View Details</label>
-                                        <Link to={`/dashboard/confirmProject/${message._id}`} className={`${message.status ? "bg-green-700 px-3 py-1 disabled:bg-opacity-40 disabled:cursor-not-allowed font-semibold" : "myBtn"}`}>Confirm</Link>
+                                        <Link to={`/dashboard/confirmProject/${message._id}`}>    
+                                            <button disabled={message.status ? true:false} className={`${message.status ? `bg-green-500 px-3 py-3 text-white rounded-lg font-semibold disabled:opacity-40 disabled:cursor-not-allowed` : "myBtn"}`}>Confirmed</button>
+                                            </Link>
                                     </th>
 
                                     <input type="checkbox" id={message._id} className="modal-toggle" />

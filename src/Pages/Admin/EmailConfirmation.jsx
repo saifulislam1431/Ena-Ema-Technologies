@@ -3,13 +3,15 @@ import { useForm } from 'react-hook-form';
 import SectionHead from '../../components/SectionHead';
 import { HiOutlinePaperAirplane } from 'react-icons/hi2';
 import useClientMessage from '../../Hooks/useClientMessage';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import SectionTitle from '../../components/SectionTitle';
 import useAxiosSecure from '../../Hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
 
 const EmailConfirmation = () => {
+    const navigate = useNavigate()
     const { id } = useParams();
+    console.log(id);
     const [axiosSecure] = useAxiosSecure();
     const [messages, refetch] = useClientMessage();
 
@@ -25,18 +27,20 @@ const EmailConfirmation = () => {
 
     const onSubmit = async (data) => {
         console.log(data);
-        const response = await axiosSecure.post('/message/confirm', data );
-        if (response.data.insertedId) {
-            const res = await axiosSecure.patch(`/message/${id}}`);
-            if (res.data.modifiedCount > 0) {
+        const response = await axiosSecure.patch(`/message/confirm/${id}`, data );
+        if (response.data.modifiedCount > 0) {
+            // console.log(response.data.message);
+            // const res = await axiosSecure.patch(`/message/${id.toString()}}`);
+            // if (res.data.modifiedCount > 0) {
                 refetch();
+                navigate("/dashboard/manageClients")
                 Swal.fire({
                     title: 'Success!',
-                    text: `Marked as read!`,
+                    text: "Message confirmed and email sent!",
                     icon: 'success',
                     confirmButtonText: 'Cool'
                 })
-            }
+            // }
         }
     }
 
